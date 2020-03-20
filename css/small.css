@@ -355,9 +355,9 @@ a {
 		font-size: .75em;
 		text-align: center;
 		padding: 10px 0;
-	  }
+	}
 	
-	  .symbol {
+	symbol {
 		margin: 0 10px;
 		display: inline;
 	}
