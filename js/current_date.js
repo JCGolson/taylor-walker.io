@@ -7,7 +7,7 @@ document.getElementById("year").innerHTML = date;
 
 // The footer must display the current date using JavaScript 
 // in this format Wednesday, 24 July 2020
-
+/*
 const daynames = [
 	"Sunday",
 	"Monday",
@@ -38,3 +38,4 @@ const year = d.getFullYear();
 const fulldate = dayName + ", " + d.getDate() + " " + monthName + " " + year;
 document.getElementById("currentdate").textContent = fulldate;
 
+*/

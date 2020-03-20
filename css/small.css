@@ -23,7 +23,7 @@ footer {
 	display: block;
 	width: 100%;
 	margin: 10px 0;
-	padding: 25px;
+	padding: 10px;
 	text-align: center;
 	background-color: #541c1d;
 	color: #fff;
@@ -38,8 +38,8 @@ footer {
 	margin: 10px auto;
 }
 
-symbol {
-	display: block;
+.symbol {
+	display: hidden;
 }
 
 a {
@@ -378,8 +378,7 @@ a {
 		padding: 10px 0;
 	}
 	*/
-	symbol {
-		margin: 0 10px;
+	.symbol {
 		display: inline;
 	}
 
