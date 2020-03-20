@@ -79,6 +79,11 @@ a {
 	color: #ccc;
 }
 
+.active {
+	background-color: #666;
+	color: #fff;
+}
+
 .nav-fostrap li a {
 	padding: 15px 20px;
 	font-size: 14px;
