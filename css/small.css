@@ -14,9 +14,19 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+
 .content {
 	height: 200px;
 }
+
+footer {
+	width: 100%;
+	margin: 10px 0;
+	text-align: center;
+	background-color: #541c1d;
+	color: #fff;
+}
+
 
 a {
 	text-decoration: none;
@@ -318,6 +328,7 @@ a {
 	}
 }
 
+
 @media only screen and (min-width: 65em) {
 	
 	.container {
@@ -338,6 +349,18 @@ a {
 		margin-top: 55px;
 	}
 
+	#full-width-bottom {
+		background: #541c1d;
+		color: white;
+		font-size: .75em;
+		text-align: center;
+		padding: 10px 0;
+	  }
+	
+	  .symbol {
+		margin: 0 10px;
+		display: inline;
+	}
 
 }
 
