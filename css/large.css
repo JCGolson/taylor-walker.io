@@ -1,14 +1,36 @@
 /* large media query */
 @media only screen and (min-width: 65em) {
    
-    .container {
-		width: 96%;
-		margin-top: 60px;
+	.container {
+		display: block;
+		position: relative;
+		text-align: left;
+	}
+	
+	.top-logo {
+		margin-top: 10px;
+		margin-left: 10px;
 	}
 
-	.container img {
-		width: 450px;
+	.top-contact {
+		vertical-align: bottom;
+		margin-right: 40px;
+		float:right;
+		margin-top: 55px;
 	}
+
+	
+	#full-width-bottom {
+		padding-top: 15px;
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		text-align: center;
+	}
+
   
  
 }
