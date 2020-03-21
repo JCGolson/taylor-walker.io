@@ -160,6 +160,7 @@ a {
 	padding-top: 0;
 }
 
+
 .nav-fostrap li ul.dropdown li {
 	display: block;
 	list-style-type: none;
@@ -171,6 +172,11 @@ a {
 	color: #fff;
 	display: block;
 	font-weight: 400;
+}
+
+.nav-fostrap li ul.dropdown li a.active {
+	background-color: #666;
+	color: #fff;
 }
 
 .nav-fostrap li ul.dropdown li:last-child a {
@@ -345,6 +351,11 @@ a {
 
 	.nav-fostrap li ul.dropdown li a {
 		padding: 10px 10px 10px 30px;
+	}
+
+	.nav-fostrap li ul.dropdown li a.active {
+		background-color: #FFF;
+		color: #333;
 	}
 
 	.nav-fostrap li:hover .arrow-down {
