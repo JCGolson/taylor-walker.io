@@ -21,12 +21,12 @@
 		margin-top: 55px;
 		width: 150px;
 	}
-	
+
 	#full-width-bottom {
 		padding-top: 15px;
 	}
 
-	.row {
+	#full-width-bottom .row {
 		display: grid;
 		grid-template-columns: 1fr 1fr .8fr .8fr .8fr;
 		grid-template-rows: 1fr;

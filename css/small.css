@@ -17,13 +17,41 @@ body {
 
 
 .content {
-	height: 200px;
+	min-height: 200px;
 	padding: 20px;
+	text-align: center;
 }
+
+.content .row {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+	padding: 15px;
+	width: 100%;
+	
+}
+
+.content .row .column img {
+	margin: 0 auto;
+	width: 90%;
+}
+
 
 h1 {
 	color: #000;
 	text-align: center;
+	font-size: 2.5em;
+	letter-spacing: .1em;
+}
+
+h2 {
+	font-size: 2.3em;
+}
+
+p {
+	font-size: 1.2em;
+	text-align: left;
+	letter-spacing: .06em;
 }
 
 
@@ -43,24 +71,23 @@ footer {
 	background: #541c1d;
 	color: white;
 	font-size: .75em;
-	line-height: .8em;
+	line-height: 1.2em;
 	text-align: center;
 	margin: 10px auto;
 }
 
-.row {
+#full-width-bottom .row {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	text-align: center;
 }
 
-.column {
+#full-width-bottom .column {
 		display: block;
 		grid-template-rows: auto;
 		width: 100%;
-		height: 15px;
-
+		margin: 2px auto;
 	
 }
 

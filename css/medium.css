@@ -6,7 +6,24 @@
     flex-direction: row;
     padding: 0;
   }
-	
+
+  .content .row {
+		display: flex;
+		flex-direction: row;
+		grid-template-columns: 2fr 3fr;
+		grid-template-rows: 1fr;
+ 	 }
+  
+  .content .row .column {
+    text-align: left;
+    padding: 10px;
+  }
+   
+  .content .row .column img {
+		justify-self: left;
+		width: 250px;
+	}
+
 	.top-logo {
 		margin-top: 10px;
 		margin-bottom:10px;
