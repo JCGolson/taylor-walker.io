@@ -1,5 +1,5 @@
 /* large media query */
-@media only screen and (min-width: 65em) {
+@media only screen and (min-width: 60em) {
    
 	.container {
 		margin-top: 0;
@@ -21,6 +21,41 @@
 		margin-top: 55px;
 		width: 150px;
 	}
+
+	.wrapper {
+        width: 100%;
+        height: auto;
+		margin: 0;
+		
+    }
+    
+    .left-wrapper {
+        float: left;
+        height: auto;
+        width: 30%;
+        align-items: left;
+    }
+    
+    .right-wrapper {
+        display: flex;
+         justify-content: space-around;
+        height: auto;
+        width: 70%;
+        float: left;
+        align-items: center;
+        padding-left: 20px;
+    }
+    
+    .left-content {
+        width: 100%;
+        height: auto;
+        right-padding: 35px;
+    }
+    
+    .right-content {
+        max-width: 100%;
+        margin: 0 15px 0 15px;
+    }
 
 	#full-width-bottom {
 		padding-top: 15px;
