@@ -1,3 +1,8 @@
+<?php
+if($_POST["message"]) {
+    mail("juanita.golson@gmail.com", "Form to email message", $_POST["message"], "From: an@email.address");
+}
+?>
 <!--Doctype HTML5 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +19,7 @@
         <link href="css/small.css" rel="stylesheet">
         <link href="css/medium.css" rel="stylesheet">
         <link href="css/large.css" rel="stylesheet">
+        <link href="css/contact.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Anton&Kanit&Roboto&display=swap" rel="stylesheet">
     </head>
     
@@ -31,15 +37,15 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a class="active" href="services.html">Services<span class="arrow-down"></span></a>
+                <li><a href="services.html">Services<span class="arrow-down"></span></a>
                     <ul class="dropdown">
                         <li><a href="captive-services.html">Captive Services</a></li>
                         <li><a href="insurance-companies.html">Insurance Companies</a></li>
-                        <li><a class="active" href="regulatory-services.html">Regulatory Services</a></li>
+                        <li><a href="regulatory-services.html">Regulatory Services</a></li>
                     </ul>
                 </li>
                 <li><a href="team.html">Our Team</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
+                <li><a class="active" href="contact.php">Contact Us</a></li>
             </ul>
         </div>
         <div class="nav-bg-fostrap">
@@ -52,27 +58,23 @@
   <main class="wrapper">
     <div class="left-wrapper">
         <div class="left-content">
-            <img src="images/image7.jpg" alt="Sample Image 7">
+            <img src="images/image16.jpg" alt="Sample Image 16">
         </div>
     </div>
-    <div class="right-wrapper">
+    < class="right-wrapper">
         <article class="right-content">
 
-            <h1>Regulatory Services</h1>
+            <h1>Contact Us</h1>
             <hr class="style1">
 
-            <p><b>Taylor-Walker Consulting, LLC</b> is qualified to conduct actuarial examinations, rate filing reviews and other regulatory services for state insurance departments.  Since inception we have provided regulatory services to the majority of state insurance departments.  Our experience encompasses life, accident and health, property and casualty insurers, trusts, reinsurers, and self-insured plans.</p>
+            <p><b>Questions?</b></p>
+            <p class="underscore">We are happy to answer any questions or concerns.</p>
 
-            <p>We highlight some of our qualifications and skills below:
-
-			<ul class="bullet-list">
-            <li>We have a working knowledge of statutory accounting principles and procedures, and NAIC examination guidelines</li>
-            <li>We have prepared numerous actuarial opinions, reports, and workpapers according to NAIC accreditation standards </li>
-            <li>We are licensed to use TeamMate software</li>
-            <li>We are familiar with national insurance markets</li>
-            <li>We have a reputation for strong professional standards, and quality work product</li>
-            </ul>
-           </p></p>
+            <form method="post" action="contact.php">
+                <textarea name="message"></textarea>
+                <input type="submit">
+            </form>
+            
         </article>
     </div>
 </main>
