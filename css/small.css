@@ -249,14 +249,12 @@ height: 1%;
     height: auto;
     float: none;
     text-align: center;
-	/*background-color: #cccccc;*/
 	padding: 15px;
 }
 
 .left-content {
     display: block;
 	width: 100%;
-/*	height: auto;*/
 	float: none;
 }
 
