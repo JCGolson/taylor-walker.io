@@ -2,7 +2,7 @@
 @media only screen and (min-width: 60em) {
    
 	.container {
-		margin-top: 0;
+		margin-top: -50px;
 		margin-bottom: 0;
 		border-bottom: hidden;
 	
