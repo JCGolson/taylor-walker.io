@@ -12,26 +12,27 @@
     <meta name="copyright" content="2020 - Taylor-Walker" />
 
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/temp.css" rel="stylesheet">
     <link href="css/small.css" rel="stylesheet">
     <link href="css/medium.css" rel="stylesheet">
     <link href="css/large.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Anton&Kanit&Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!--------------------------------------Page Header------------------------------->
+    <!--------------------------------------Page Header------------------------------->
     <header class="container">
         <img class="top-logo" src="images/tw-logo-big.jpg" alt="Taylor-Walker logo">
         <a href="contact.php"><img class="top-contact" src="images/ContactButton.jpg" alt="Contact Taylor-Walker"></a>
     </header>
 
-<!--------------------------------Navigation Bar------------------------------->
+    <!--------------------------------Navigation Bar------------------------------->
     <nav>
         <div class="nav-fostrap">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="about.html">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services<span class="arrow-down"></span></a>
                     <ul class="dropdown">
                         <li><a href="captive-services.html">Captive Services</a></li>
@@ -40,7 +41,7 @@
                     </ul>
                 </li>
                 <li><a href="team.html">Our Team</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
+                <li><a class="active" href="contact.php">Contact Us</a></li>
             </ul>
         </div>
         <div class="nav-bg-fostrap">
@@ -49,36 +50,78 @@
         </div>
     </nav>
 
-
-<!-----------------------------Main Content------------------------------------------->
-<main id="wrapper">
-        <div class="left-container">
+    <!-----------------------------Main Content------------------------------------------->
+    <main class="wrapper">
+        <div class="left-wrapper">
             <div class="left-content">
-                <img src="images/image2.jpg" alt="Working Staff">
-        
+                <img src="images/image16.jpg" alt="Sample Image 16">
             </div>
         </div>
-        <div class="right-container">
-            <div class="right content">
-            <h1>About Taylor-Walker Actuaries</h1>
-        
-            <p><b>Taylor-Walker Consulting, LLC</b> has been in business since the mid 1980's.</p>
+        <div class="right-wrapper">
+            <article class="right-content">
 
-            <p>First known as Walker & Associates and founded by Merle LaMar Walker II, ASA, MAAA, our firm concentrated primarily on regulation services to state insurance departments.  For several years we also employed financial and market conduct examiners.  As such, we gained valuable experience in the governing and regulation of state insurance departments with regard to insurance companies, as well as gaining a rapport with state officials.  </p>
+                <h1>Questions?</h1>
+                <hr class="style1">
 
-            <p>In 1993 the firm was purchased by Mr. R. Glenn Taylor, ACAS, MAAA, one of our partners, and the name was changed to Taylor-Walker & Associates, Inc.  At that time Taylor-Walker became an actuarial-only firm.  However, our actuaries still continued to support the states in performing the actuarial portion of state examinations. </p>
+                <p><b>Taylor-Walker Consulting, LLC</b> is happy to answer any questions or concerns.</p>
 
-            <p>During the early 1990's under Mr. Taylor's leadership, we became knowledgeable in other areas, especially in providing services to the captive insurance industry.  Working both with the captive companies themselves, and state captive insurance personnel, we became one of the first actuarial firms to assist in the formation and regulation of captive insurance companies. </p>
-
-            <p>We continued to grow, and after 23 years under Mr. Taylor, he stepped down as President, and the business was purchased by Mr. Scott Garduno, FSA, MAAA, an actuary with the firm since 2006.  All Taylor-Walker & Associates employees (including Mr. Taylor and many of the original Walker & Associates employees), continue to work for the newly named, Taylor-Walker Consulting, LLC.  </p>
-
-            <p>We are committed to all of our client's needs, and continue to provide the same great service that we have been providing since inception to regulatory, captive, self-funded, and insurance companies.  </p>
-    
-            </div>
         </div>
 
+        <form name="contactform" method="post" action="mailform.php">
+            <table width="450px">
+            <tr>
+             <td valign="top">
+              <label for="first_name">First Name *</label>
+             </td>
+             <td valign="top">
+              <input  type="text" name="first_name" maxlength="50" size="30">
+             </td>
+            </tr>
+            <tr>
+             <td valign="top">
+              <label for="last_name">Last Name *</label>
+             </td>
+             <td valign="top">
+              <input  type="text" name="last_name" maxlength="50" size="30">
+             </td>
+            </tr>
+            <tr>
+             <td valign="top">
+              <label for="email">Email Address *</label>
+             </td>
+             <td valign="top">
+              <input  type="text" name="email" maxlength="80" size="30">
+             </td>
+            </tr>
+            <tr>
+             <td valign="top">
+              <label for="telephone">Telephone Number</label>
+             </td>
+             <td valign="top">
+              <input  type="text" name="telephone" maxlength="30" size="30">
+             </td>
+            </tr>
+            <tr>
+             <td valign="top">
+              <label for="comments">Comments *</label>
+             </td>
+             <td valign="top">
+              <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+             </td>
+            </tr>
+            <tr>
+             <td colspan="2" style="text-align:center">
+              <input type="submit" value="Submit"> 
+             </td>
+            </tr>
+            </table>
+            </form>
+
+        </div>
     </main>
-<!-----------------------------Page Footer------------------------------------------->
+
+
+    <!-----------------------------Page Footer------------------------------------------->
     <footer id="full-width-bottom">
         <div class="row">
             <div class="column 1">

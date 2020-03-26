@@ -1,4 +1,3 @@
-
 form#captcha_form ol {list-style: none outside none;}
 form#captcha_form label.solo, form#captcha_form span.category {
 	display:		block; 
