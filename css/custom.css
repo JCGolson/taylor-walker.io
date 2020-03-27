@@ -6,8 +6,14 @@ h1 {
     margin-bottom: 40px;
 }
 
+p {
+    color: #000000;
+}
+
 label {
-    color: #333;
+    color: #541c1d;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .btn-send {
