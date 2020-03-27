@@ -2,16 +2,13 @@
 // require ReCaptcha class
 require('recaptcha-master/src/autoload.php');
 
-require('PHPMailer-master/PHPMailerAutoload.php');
-
-
 // an email address that will be in the From field of the email.
 $fromEmail = 'martin@martingolson.com';
 $fromName = 'Juanita Golson';
 
 // an email address that will receive the email with the output of the form
 $sendToEmail = 'martin@martingolson.com';
-$sendToName = 'Juanita Golson';
+$sendToName = 'Demo contact form';
 
 // subject of the email
 $subject = 'New message from contact form';
@@ -82,7 +79,7 @@ try {
 } catch (\Exception $e) {
     $responseArray = array('type' => 'danger', 'message' => $e->getMessage());
 }
-/*
+
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
     $encoded = json_encode($responseArray);
 
@@ -92,19 +89,7 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
 } else {
     echo $responseArray['message'];
 }
-*/
 
-if ($responseArray['type'] == 'success') {
-    // success redirect
-
-    header('Location: email_sent.html');
-}
-else {
-    //error redirect
-    header('Location: email_error.html');
-}
-
-/* ----------- HTML letter formatting -----------------*/
 $emailTextHtml = "<h1>You have a new message from your contact form</h1><hr>";
 $emailTextHtml .= "<table>";
 
@@ -122,13 +107,3 @@ $mail = new PHPMailer;
 $mail->setFrom($fromEmail, $fromName);
 $mail->addAddress($sendToEmail, $sendToName); // you can add more addresses by simply adding another line with $mail->addAddress();
 $mail->addReplyTo($from);
-
-$mail->isHTML(true);
-
-$mail->Subject = $subject;
-$mail->msgHTML($emailTextHtml); // this will also create a plain-text version of the HTML email, very handy
-
-if(!$mail->send()) {
-    throw new \Exception('I could not send the email.' . $mail->ErrorInfo);
-}
-
