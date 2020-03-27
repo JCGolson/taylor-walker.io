@@ -2,13 +2,12 @@
 // require ReCaptcha class
 require('recaptcha-master/src/autoload.php');
 
+// configure
 // an email address that will be in the From field of the email.
-$fromEmail = 'martin@martingolson.com';
-$fromName = 'Juanita Golson';
+$from = 'Demo contact form <martin@martingolson.com>';
 
 // an email address that will receive the email with the output of the form
-$sendToEmail = 'martin@martingolson.com';
-$sendToName = 'Demo contact form';
+$sendTo = 'Demo contact form <martin@martingolson.com>';
 
 // subject of the email
 $subject = 'New message from contact form';
@@ -18,7 +17,7 @@ $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message');
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'Contact form successfully submitted. Thank you, Taylor-Walker Consulting, LLC will get back to you soon!';
+$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
 
 // If something goes wrong, we will display this message.
 $errorMessage = 'There was an error while submitting the form. Please try again later';
@@ -89,21 +88,3 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
 } else {
     echo $responseArray['message'];
 }
-
-$emailTextHtml = "<h1>You have a new message from your contact form</h1><hr>";
-$emailTextHtml .= "<table>";
-
-foreach ($_POST as $key => $value) {
-    // If the field exists in the $fields array, include it in the email
-    if (isset($fields[$key])) {
-        $emailTextHtml .= "<tr><th>$fields[$key]</th><td>$value</td></tr>";
-    }
-}
-$emailTextHtml .= "</table><hr>";
-$emailTextHtml .= "<p>Have a nice day,<br>Best,<br>Juanita</p>";
-
-$mail = new PHPMailer;
-
-$mail->setFrom($fromEmail, $fromName);
-$mail->addAddress($sendToEmail, $sendToName); // you can add more addresses by simply adding another line with $mail->addAddress();
-$mail->addReplyTo($from);
