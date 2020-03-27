@@ -6,12 +6,12 @@ require('PHPMailer-master/PHPMailerAutoload.php');
 
 
 // an email address that will be in the From field of the email.
-$fromEmail = 'demo@domain.com';
-$fromName = 'Demo contact form';
+$fromEmail = 'martin@martingolson.com';
+$fromName = 'Juanita Golson';
 
 // an email address that will receive the email with the output of the form
-$sendToEmail = 'demo@domain.com';
-$sendToName = 'Demo contact form';
+$sendToEmail = 'martin@martingolson.com';
+$sendToName = 'Juanita Golson';
 
 // subject of the email
 $subject = 'New message from contact form';
