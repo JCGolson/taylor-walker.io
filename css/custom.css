@@ -28,7 +28,7 @@ label {
     margin-top: 5px;
 }
 
-.contact-row {
+.controls row {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;

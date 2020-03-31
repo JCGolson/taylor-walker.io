@@ -24,22 +24,25 @@ body {
 	color: #666;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2 {
 	font-family: 'Anton', sans-serif;
 }
 
 h1 {
 	color: #541c1d;
 	text-align: center;
-	font-size: 2em;
+	font-size: 3em;
 	letter-spacing: .1em;
 	padding: 0 20px;
 	margin-bottom: 15px;
 }
 
 h2 {
+	color: #541c1d;
 	text-align: center;
-	font-size: 1.75em;
+	font-size: 2em;
+	letter-spacing: .1em;
+	margin-bottom: 15px;
 }
 
 .style1 {
@@ -48,8 +51,10 @@ h2 {
 	margin: 0 40px 30px 40px;
 }
 
-h2 {
-	font-size: 2.3em;
+.style2 {
+	border-top: #666666 solid 2px;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 p {
