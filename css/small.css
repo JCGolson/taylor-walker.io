@@ -25,7 +25,8 @@ body {
 }
 
 h1, h2 {
-	font-family: 'Anton', sans-serif;
+	font-style: italic;
+	font-weight: bold;
 }
 
 h1 {
