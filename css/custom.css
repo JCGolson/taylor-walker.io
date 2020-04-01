@@ -81,12 +81,6 @@ label {
     cursor: pointer
 }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
-    pointer-events: none
-}
-
-
 .btn-success {
     color: #fff;
     background-color: #541c1d;
