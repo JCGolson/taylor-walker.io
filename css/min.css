@@ -301,7 +301,7 @@ template {
 [hidden] {
     display: none !important
 }
-
+/*
 .h1,
 .h2,
 .h3,
@@ -350,7 +350,7 @@ h5 {
 h6 {
     font-size: 1rem
 }
-
+*/
 .lead {
     font-size: 1.25rem;
     font-weight: 300
@@ -505,8 +505,8 @@ pre code {
     max-height: 340px;
     overflow-y: scroll
 }
-
-.container {
+/*
+.contact-row {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -515,25 +515,25 @@ pre code {
 }
 
 @media (min-width:576px) {
-    .container {
+    .contact-row {
         max-width: 540px
     }
 }
 
 @media (min-width:768px) {
-    .container {
+    .contact-row {
         max-width: 720px
     }
 }
 
 @media (min-width:992px) {
-    .container {
+    .contact-row {
         max-width: 960px
     }
 }
 
 @media (min-width:1200px) {
-    .container {
+    .contact-row {
         max-width: 1140px
     }
 }
@@ -545,8 +545,8 @@ pre code {
     margin-right: auto;
     margin-left: auto
 }
-
-.row {
+*/
+.contact-row {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
