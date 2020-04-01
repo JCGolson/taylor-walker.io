@@ -9,7 +9,7 @@
 [tabindex="-1"]:focus {
     outline: 0 !important
 }
-
+/*
 hr {
     box-sizing: content-box;
     height: 0;
@@ -173,7 +173,7 @@ caption {
 th {
     text-align: inherit
 }
-
+*/
 label {
     display: inline-block;
     margin-bottom: .5rem
@@ -301,7 +301,7 @@ template {
 [hidden] {
     display: none !important
 }
-
+/*
 .h1,
 .h2,
 .h3,
@@ -554,7 +554,7 @@ pre code {
     margin-right: -15px;
     margin-left: -15px
 }
-
+*/
 .no-gutters {
     margin-right: 0;
     margin-left: 0
