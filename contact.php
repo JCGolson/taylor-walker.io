@@ -54,7 +54,7 @@ try {
         
         // everything went well, we can compose the message, as usually
         
-        $emailText = "You have a new message from your contact form\n=============================\n";
+        $emailText = "You have a new message from your contact form\n\n=====================================\n";
 
         foreach ($_POST as $key => $value) {
             // If the field exists in the $fields array, include it in the email
