@@ -17,6 +17,7 @@ label {
 }
 
 .contact-row {
+    width: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -69,4 +70,3 @@ label {
 .show>.btn-success.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem #996666;
 }
-
