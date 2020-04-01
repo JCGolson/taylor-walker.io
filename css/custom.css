@@ -15,7 +15,7 @@ label {
     font-size: 1.2em;
     font-weight: bold;
 }
-
+/*
 .btn-send {
     font-weight: 300;
     text-transform: uppercase;
@@ -27,8 +27,8 @@ label {
     color: #ff5050;
     margin-top: 5px;
 }
-
-.controls row {
+*/
+.contact-row {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -36,7 +36,7 @@ label {
     margin-right: -15px;
     margin-left: -15px
 }
-
+/*
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -54,7 +54,7 @@ label {
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
-
+*/
 @media screen and (prefers-reduced-motion:reduce) {
     .btn {
         transition: none
