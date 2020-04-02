@@ -1696,7 +1696,8 @@ mark {
 }
 
 .text-muted {
-    color: #777
+    color: #777;
+    font-size: 1rem;
 }
 
 .text-primary {
@@ -3621,6 +3622,8 @@ textarea.input-lg {
     height: 30px;
     line-height: 30px
 }
+
+/*-------------------------------------------------------------------*/
 
 .has-success .checkbox,
 .has-success .checkbox-inline,

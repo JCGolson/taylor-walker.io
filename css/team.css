@@ -1,58 +1,14 @@
 main {
     width: 80%;
     margin: 0 auto;
-    display: grid;
-    grid-row-gap: 1.5em;
-    padding: 2em 0;
-    grid-template-columns: 1fr 75% 1fr;
- 
-    @media (max-width: 750px) {
-        grid-template-columns: 2rem 1fr 2rem;
-    }
-}
-
-main>* {
-    grid-column: 2 / span 1;
-}
-
-.full-width {
-    grid-column: 1 / -1;
+    padding: 0 30px;
+    display:block;
 }
 
 img {
-    width: 100%;
-}
-
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
-    padding: 1rem;
-}
-
-.card>*+* {
-    padding-top: 0.5em;
-}
-
-/* The magic. This 👇 is what you're here for */
-
-.img-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 120%;
-    overflow: hidden;
+    max-width: 100%;
     border: #000 4px double;
-}
-
-.img-wrapper>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    padding: 3px;
 }
 
 .caption {
@@ -70,4 +26,25 @@ img {
 
 p {
     color: #000;
+}
+
+.proj_images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.disp1,
+.disp2,
+.disp3,
+.disp4,
+.disp5,
+.disp6 {
+    margin: 10px;
 }
