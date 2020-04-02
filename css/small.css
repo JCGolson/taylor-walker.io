@@ -24,7 +24,7 @@ body {
 	color: #666;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
 	font-family: 'Kanit';
 	font-weight: bold;
 }
@@ -44,6 +44,12 @@ h2 {
 	font-size: 2em;
 	letter-spacing: .1em;
 	margin-bottom: 15px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 1.5em;
+	color: #000;
 }
 
 .style1 {
