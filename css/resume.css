@@ -76,6 +76,7 @@ div#resume {
 
   div#resume ul {
     padding-left: 25px;
+    margin-bottom: 25px;
   }
  
   div#resume li {
@@ -86,6 +87,7 @@ div#resume {
     list-style-type: none;
     font-style: italic;
     font-weight:bold;
+    margin-bottom: 25px;
   }
 
   ul.b {
@@ -93,6 +95,7 @@ div#resume {
     font-weight: normal;
     padding-left: 0;
     margin-left: -20px;
+    margin-bottom: 25px;
   }
   
   .underline {
