@@ -88,7 +88,9 @@ a {
 .header-container {
 	/*max-width: 1200px;*/
 	background: #fff;
-	display:flex;
+	max-height: 130px;
+	display: -webkit-flex;
+    display:flex;
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: nowrap;
