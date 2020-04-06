@@ -102,6 +102,7 @@ a {
 
 .top-logo {
 	max-width:150px;
+	max-height: 54px;
 	width: auto;
 	height: auto;
 	padding-left:10px;
