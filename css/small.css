@@ -100,17 +100,16 @@ a {
 
 }
 
-img.top-logo {
+.top-logo {
+	width:200px;
 	padding-left:10px;
 	margin-bottom:10px;
-	border: 0;
 }
 
 .top-contact {
 	width: 100px;
 	margin-top: 10px;
 	margin-right:20px;
-	border: 0;
 }
 
 .top-contact a {
