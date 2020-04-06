@@ -82,6 +82,16 @@ div#resume {
     text-align: left;
   }
 
+  ul.a {
+    list-style-type: none;
+    font-style: italic;
+    font-weight:bold;
+  }
+  
+  li.underline {
+    text-decoration:underline;
+  }
+
   @media screen and (max-width:1100px) {
     div#resume h2 span {
       position: static;
