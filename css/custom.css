@@ -15,17 +15,7 @@ label {
     font-size: 1.2em;
     font-weight: bold;
 }
-/*
-.contact-row {
-    width: 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px
-}
-*/
+
 
 @media screen and (prefers-reduced-motion:reduce) {
     .btn {
