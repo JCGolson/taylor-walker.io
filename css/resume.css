@@ -13,6 +13,7 @@
   font-size: 2em;
   letter-spacing: normal;
   max-width: 80%;
+  margin: 0 15px 0 0;
 }
 
 div#resume {
@@ -20,7 +21,6 @@ div#resume {
     font: 16px Roboto sans-serif;
     line-height: 24px;
     color: #000;
-    margin: 0 15px 0 0;
   }
   
   div#resume h1 {
