@@ -312,6 +312,8 @@ a {
 	font-size: 1.2em;
 }
 
+p { margin-bottom: 5px;}
+
 footer {
 	display: grid;
 	width: 100%;
