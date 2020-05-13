@@ -2,74 +2,26 @@
 @media only screen and (min-width: 60em) {
    
 	.header-container {
-		margin-top: -50px;
-		margin-bottom: 0;
+		padding-top: 15px;
+		padding-bottom: 15px;
 		border-bottom: hidden;
 	
 	}
 	
 	.top-logo {
 		max-width: 350px;
-		max-height: 200px;
-		width: auto;
-		height: auto;
-		margin-top: 10px;
-		margin-bottom:10px;
-		margin-left: 10px;
 	}
 
 	.top-contact {
-		margin-right: 40px;
-		float:right;
-		margin-top: 55px;
 		width: 150px;
 	}
 
-	.wrapper {
-        width: 100%;
-        height: auto;
-		margin: 0;
-		
-    }
-    
-    .left-wrapper {
-        float: left;
-        height: auto;
+	.left-wrapper {
         width: 30%;
-        align-items: center;
     }
     
     .right-wrapper {
-        display: flex;
-         justify-content: space-around;
-        height: auto;
         width: 70%;
-        float: left;
-        align-items: center;
-        padding-left: 20px;
-    }
-    
-    .left-content {
-        width: 100%;
-        height: auto;
-        padding-right: 35px;
-    }
-    
-    .right-content {
-        max-width: 100%;
-        margin: 0 15px 0 15px;
-    }
-
-	#full-width-bottom {
-		padding-top: 15px ;
-	}
-
-	#full-width-bottom .footer-row {
-		padding: 0 80px;
-/*		display: grid;
-		grid-template-columns: 1fr 1fr .8fr .8fr;
-		grid-template-rows: 1fr;
-		align-items: center;*/
-	}
+     }
  
 }

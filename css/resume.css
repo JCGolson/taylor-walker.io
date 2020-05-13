@@ -1,16 +1,4 @@
 
-
-.right-wrapper {
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-}
-
-.style2 {
-  margin-bottom: 40px;
-}
-
-
 .right-content h1 {
   font-size: 2em;
   letter-spacing: normal;
@@ -54,16 +42,16 @@ div#resume h2 span {
 }
 
 div#resume p {
-  margin: 0;
+  margin: 0 0 15px 0;
   font-size: 1em;
 }
 
 div#resume dt {
   font-style: italic;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.2em;
   text-align: right;
-  padding: 0 26px 0 0;
+  padding: 0 0 10px 0;
   width: 200px;
   border-right: 1px solid #999;
 }
@@ -80,11 +68,7 @@ div#resume dl dd {
 
 div#resume dl dd {
   width: 500px;
-  padding-left: 26px
-}
-
-div#resume dd {
-  padding-right: 20px;
+  padding-left: 15px;
 }
 
 div#resume ul {
@@ -120,23 +104,44 @@ ul.b {
   font-weight: bold;
 }
 
-@media screen and (max-width:1100px) {
 
 
-  div#resume h2 span {
-    position: static;
-    display: block;
-    margin-top: 2px
+
+@media screen and (max-width:320px) {
+
+  div#resume {
+    width: 320px;
+    padding: 12px;
+    overflow: hidden
+  }
+
+  p,
+  li {
+    margin-right: 20px
   }
 }
 
-@media screen and (max-width:550px) {
-  body {
-    margin: 1rem
+
+@media screen and (min-width:60em) {
+  .left-wrapper {
+    max-width: 250px;
+  }
+
+  .left-content {
+    padding: 0;
+  }
+
+  .right-wrapper {
+    max-width: 100%;
+  }
+
+  .right-content {
+    max-width: 100%;
   }
 }
 
-@media screen and (max-width:400px) {
+
+@media screen and (max-width:800px) {
   div#resume dl dt {
     border-right: none;
     border-bottom: 1px solid #000;
@@ -167,36 +172,4 @@ ul.b {
     font-size: 20px
   }
 
-}
-
-@media screen and (max-width:320px) {
-  body {
-    margin: 0
-  }
-
-  img {
-    margin: 0;
-    margin-bottom: -40px
-  }
-
-  div#resume {
-    width: 320px;
-    padding: 12px;
-    overflow: hidden
-  }
-
-  p,
-  li {
-    margin-right: 20px
-  }
-}
-
-@media screen and (min-width:60em) {
-  .left-wrapper {
-    max-width: 25%;
-  }
-
-  .right-wrapper {
-    max-width: 100%;
-  }
 }
