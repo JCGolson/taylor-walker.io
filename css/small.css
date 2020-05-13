@@ -132,6 +132,7 @@ a {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	padding-left: 20px;
 	display: block;
 }
 
@@ -143,6 +144,7 @@ a {
 	position: relative;
 	font-size: 14px;
 	color: #ccc;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.26)
 }
 
 .active {
@@ -416,6 +418,7 @@ footer {
 
 	.nav-fostrap ul {
 		padding-top: 50px;
+		padding-left: 0;
 	}
 
 	.nav-fostrap li {

@@ -16,12 +16,12 @@
 		width: 150px;
 	}
 
-	.left-wrapper {
-        width: 30%;
-    }
-    
+  
     .right-wrapper {
-        width: 70%;
-     }
+		width: 70%;
+    }
  
+	.right-content {
+		margin-right: 50px;
+	}
 }
