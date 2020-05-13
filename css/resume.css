@@ -1,4 +1,15 @@
 
+.right-wrapper {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.style2 {
+  margin-bottom: 40px;
+}
+
+
 .right-content h1 {
   font-size: 2em;
   letter-spacing: normal;
@@ -39,10 +50,11 @@ div#resume h2 span {
   color: #000;
   letter-spacing: 0em;
   margin-left: 50px;
+  margin-right: 20px;
 }
 
 div#resume p {
-  margin: 0 0 15px 0;
+  margin: 0 20px 20px 0;
   font-size: 1em;
 }
 
@@ -51,7 +63,7 @@ div#resume dt {
   font-weight: bold;
   font-size: 1.2em;
   text-align: right;
-  padding: 0 0 10px 0;
+  padding: 0 15px 0 0;
   width: 200px;
   border-right: 1px solid #999;
 }
@@ -67,7 +79,7 @@ div#resume dl dd {
 }
 
 div#resume dl dd {
-  width: 500px;
+  width: 900px;
   padding-left: 15px;
 }
 
@@ -105,42 +117,6 @@ ul.b {
 }
 
 
-
-
-@media screen and (max-width:320px) {
-
-  div#resume {
-    width: 320px;
-    padding: 12px;
-    overflow: hidden
-  }
-
-  p,
-  li {
-    margin-right: 20px
-  }
-}
-
-
-@media screen and (min-width:60em) {
-  .left-wrapper {
-    max-width: 250px;
-  }
-
-  .left-content {
-    padding: 0;
-  }
-
-  .right-wrapper {
-    max-width: 100%;
-  }
-
-  .right-content {
-    max-width: 100%;
-  }
-}
-
-
 @media screen and (max-width:800px) {
   div#resume dl dt {
     border-right: none;
@@ -152,7 +128,7 @@ ul.b {
   div#resume dl dt {
     display: block;
     padding-left: 0;
-    margin-left: 0;
+    margin-left: 10px;
     padding-bottom: 0;
     text-align: left;
     width: 100%
