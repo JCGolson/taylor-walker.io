@@ -1,0 +1,27 @@
+/* large media query */
+@media only screen and (min-width: 60em) {
+   
+	.header-container {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		border-bottom: hidden;
+	
+	}
+	
+	.top-logo {
+		max-width: 350px;
+	}
+
+	.top-contact {
+		width: 150px;
+	}
+
+  
+    .right-wrapper {
+		width: 70%;
+    }
+ 
+	.right-content {
+		margin-right: 50px;
+	}
+}

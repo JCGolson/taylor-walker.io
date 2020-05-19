@@ -23,7 +23,7 @@ $okMessage = 'Contact form successfully submitted. Thank you, we will get back t
 $errorMessage = 'There was an error while submitting the form. Please try again later';
 
 // ReCaptch Secret
-$recaptchaSecret = '6LcToOQUAAAAAPSofuyIilR6odFGb5u_AR1hZ8vK';
+$recaptchaSecret = '6LdenuQUAAAAAKUaOGujjuzURRTcKcFhTwlR6Xxz';
 
 // let's do the sending
 

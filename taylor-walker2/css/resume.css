@@ -1,0 +1,151 @@
+
+.right-wrapper {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.style2 {
+  margin-bottom: 40px;
+}
+
+
+.right-content h1 {
+  font-size: 2em;
+  letter-spacing: normal;
+}
+
+div#resume {
+  max-width: 100%;
+  font: 16px Roboto sans-serif;
+  line-height: 24px;
+  color: #000;
+}
+
+div#resume h1 {
+  margin: 0 0 16px 0;
+  padding: 0 0 16px 0;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  border-bottom: 1px solid #999;
+  line-height: 50px
+}
+
+div#resume h2 {
+  font-size: 20px;
+  margin: 0 0 6px 0;
+  font-family: Roboto, sans-serif;
+  text-align: left;
+  position: relative
+}
+
+div#resume h2 span {
+  position: static;
+  display: block;
+  margin-top: -25px;
+  text-align: right;
+  font-style: italic;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: 0em;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+div#resume p {
+  margin: 0 20px 20px 0;
+  font-size: 1em;
+}
+
+div#resume dt {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: right;
+  padding: 0 15px 0 0;
+  width: 200px;
+  border-right: 1px solid #999;
+}
+
+div#resume dl {
+  display: table-row
+}
+
+div#resume dl dt,
+div#resume dl dd {
+  display: table-cell;
+  padding-bottom: 20px
+}
+
+div#resume dl dd {
+  width: 900px;
+  padding-left: 15px;
+}
+
+div#resume ul {
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
+
+div#resume li {
+  text-align: left;
+}
+
+ul.a {
+  list-style-type: none;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+ul.b {
+  list-style-type: none;
+  font-weight: normal;
+  padding-left: 0;
+  margin-left: -20px;
+  margin-bottom: 25px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline2 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width:850px) {
+  div#resume dl dt {
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+
+  div#resume dl,
+  div#resume dl dd,
+  div#resume dl dt {
+    display: block;
+    padding-left: 0;
+    margin-left: 10px;
+    padding-bottom: 0;
+    text-align: left;
+    width: 100%
+  }
+
+  div#resume dl dd {
+    margin-top: 6px
+  }
+
+  div#resume h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px
+  }
+
+  div#resume dt {
+    font-size: 20px
+  }
+
+}

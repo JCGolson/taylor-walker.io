@@ -1,0 +1,7 @@
+div.row {
+    max-width: 90%;
+}
+
+div.col-md-6.col-md-offset-3 {
+    margin: 0 auto 20px auto;
+}

@@ -1,0 +1,53 @@
+.team-listing {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display:block;
+}
+
+img {
+    max-width: 100%;
+    border: #000 4px double;
+    padding: 3px;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 90%;
+    font-style: italic;
+    color: #636363;
+}
+
+.underline {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+p {
+    color: #000;
+}
+
+.proj_images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.disp1,
+.disp2,
+.disp3,
+.disp4,
+.disp5,
+.disp6 {
+    margin: 10px;
+}
