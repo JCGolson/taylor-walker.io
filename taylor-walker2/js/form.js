@@ -1,4 +1,3 @@
-
 $(function()
 {
     function after_form_submitted(data) 
@@ -53,7 +52,7 @@ $(function()
 
                     $.ajax({
                 type: "POST",
-                url: 'handler.php',
+                url: 'http://reusableforms.com/handler/a/html5-contact-form-with-captcha',
                 data: $form.serialize(),
                 success: after_form_submitted,
                 dataType: 'json' 
@@ -61,8 +60,6 @@ $(function()
         
       });	
 });
-
-
 
 $(function()
 {
@@ -74,5 +71,5 @@ $(function()
 	  src = src.split(/[?#]/)[0];
 	  
 	  $("img#captcha_image").attr("src", src+'?'+d.getTime());
-	});
+    });
 });
