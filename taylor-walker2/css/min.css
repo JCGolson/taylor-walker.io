@@ -418,7 +418,7 @@ input[type=search] {
 .radio input[type=radio],
 .radio-inline input[type=radio] {
     position: absolute;
-    margin-top: 4px\9;
+    margin-top: 4px;
     margin-left: -20px
 }
 
@@ -586,7 +586,6 @@ textarea.input-lg {
     height: 34px;
     line-height: 34px;
     text-align: center;
-    pointer-events: none
 }
 
 .form-group-lg .form-control+.form-control-feedback,
