@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taylor-Walker Consulting LLC</title>
+    <title>Email Success </title>
     <meta name="description"
-        content="Taylor-Walker Consulting, LLC is an actuarial consulting firm dedicated to customer service. Our mission is to provide clients with the expertise of a large firm while maintaining the one-on-one ...">
+        content="Your email was sent successfully.">
     <meta name="robots" content="index, follow" />
     <meta name="copyright" content="2020 - Taylor-Walker" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -42,7 +42,7 @@
                     </ul>
                 </li>
                 <li><a href="team.html">Our Team</a></li>
-                <li><a class="active" href="contact-form.html">Contact Us</a></li>
+                <li><a href="contact-form.html">Contact Us</a></li>
             </ul>
         </div>
         <div class="nav-bg-fostrap">
@@ -62,10 +62,10 @@
         <div class="right-wrapper">
             <div class="right-content">
 
-                        <h1>Error!</h1>
+                        <h1>Success</h1>
                         <hr class="style1">
 
-                        <p>Something went wrong. Please check to make sure you have all fields filled in and try, again. </p>
+                        <p>Your email was sent successfully. <b>Taylor-Walker Consulting, LLC</b> will gladly answer your     message and get back to you ASAP.</p>
 
             </div>
         </div>
