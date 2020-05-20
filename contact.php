@@ -1,115 +1,37 @@
 <?php
-// require ReCaptcha class
-//require('recaptcha-master/src/autoload.php');
 
-
-
-
-// configure
-// an email address that will be in the From field of the email.
-$from = 'Taylor-Walker contact form <webcontact@taylor-walker.com>';
-
-// an email address that will receive the email with the output of the form
-$sendTo = 'Web Contact <martin@martingolson.com>';
-
-// subject of the email
-$subject = 'New message from contact form';
-
-// form field names and their translations.
-// array variable name => Text to appear in the email
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message');
-
-// message that will be displayed when everything is OK :)
-$okMessage = 'Contact form successfully submitted. Thank you, we will get back to you soon!';
-
-// If something goes wrong, we will display this message.
-$errorMessage = 'There was an error while submitting the form. Please try again later';
-
-// ReCaptch Secret
-$recaptchaSecret = '6LeWFfoUAAAAAPh8aGRd0fhU-u7pXXNOhfAe82Qr';
-
-// let's do the sending
-
-// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-error_reporting(E_ALL & ~E_NOTICE);
-
-try {
-    if (!empty($_POST)) {
-
-        // validate the ReCaptcha, if something is wrong, we throw an Exception,
-        // i.e. code stops executing and goes to catch() block
-        
-        // Check if form was submitted:
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
-
-        // Build POST request:
-        $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-        $recaptcha_secret = '6LeWFfoUAAAAAPh8aGRd0fhU-u7pXXNOhfAe82Qr';
-        $recaptcha_response = $_POST['recaptcha_response'];
-    
-        // Make and decode POST request:
-        $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
-        $recaptcha = json_decode($recaptcha);
-    
-        // Take action based on the score returned:
-        if ($recaptcha->score >= 0.5) {
-            // Verified - send email
-        } else {
-            // Not verified - show form error
-        }
-/*
-        if (!isset($_POST['g-recaptcha-response'])) {
-            throw new \Exception('ReCaptcha is not set.');
-        }
-
-        // do not forget to enter your secret key from https://www.google.com/recaptcha/admin
-        
-        $recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecret, new \ReCaptcha\RequestMethod\CurlPost());
-        
-        // we validate the ReCaptcha field together with the user's IP address
-        
-        $response = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-
-        if (!$response->isSuccess()) {
-            throw new \Exception('ReCaptcha was not validated.');
-        }
-    */    
-        // everything went well, we can compose the message, as usually
-        
-        $emailText = "You have a new message from your contact form\n\n========================================\n";
-
-        foreach ($_POST as $key => $value) {
-            // If the field exists in the $fields array, include it in the email
-            if (isset($fields[$key])) {
-                $emailText .= "$fields[$key]: $value\n";
-            }
-        }
-    
-        // All the neccessary headers for the email.
-        $headers = array('Content-Type: text/plain; charset="UTF-8";',
-            'From: ' . $from,
-            'Reply-To: ' . $from,
-            'Return-Path: ' . $from,
-        );
-        
-        // Send email
-        mail($sendTo, $subject, $emailText, implode("\n", $headers));
-
-        $responseArray = array('type' => 'success', 'message' => $okMessage);
-    }
-    } 
-}
-
-catch (\Exception $e) {
-    $responseArray = array('type' => 'danger', 'message' => $e->getMessage());
-}
-
-if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-    $encoded = json_encode($responseArray);
-
-    header('Content-Type: application/json');
-
-    echo $encoded;
+/* This section validates the input boxes - note that is checking for objects by what they are named - it looks for "name", "email", and "message" which are what the input boxes are named in the HTML; this section also checks for a valid email address in the email box */
+if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) ||empty($_POST['message']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
+  /* If any of the boxes are empty or the email isn't valid, the user is redirected to a file named "error.html", which can be designed as desired */
+    echo file_get_contents("error.html");
+     exit();
 } else {
-    echo $responseArray['message'];
+
+  /* Otherwise, if the boxes are filled and a valid email is provided, the email is sent - note that this is getting items by what they are named in the HTML again, and renaming them as $name, #email_address, and $message */
+    $name = $_POST['name'];
+    $email_address = $_POST['email'];
+    $phone_number = $_POST['phone'];
+    $message = $_POST['message'];
+
+  /* This is the subject line of the email you will get - it will put in the name the user inputs */
+    $email_subject = "Website Contact Form:  $name";
+
+  /* This is the body of the email you will get - it has a title, then a message, then lists the information from the user. You can add or delete from this section as needed. */
+    $email_body = '<html><head><title>Hello!</title></head>'."\r\n";
+    $email_body .= "You have a new message from your website.\n\n"."Information:\n\nName: $name\n\nEmail:        $email_address\n\nPhone Number:  $phone_number\n\nMessage:\n$message";
+
+    $headers = 'MIME-Version: 1.0'."\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8'."\r\n";
+  
+  /* Change this to your email address */
+    $headers .= 'From:  <"martin@martingolson.com">';
+
+  /* Also change this to your email address */
+    mail("martin@martingolson.com", $email_subject, $email_body, $headers);
+
+  /* The user will be redirected to a file called "thanks.html", which can be designed as desired */
+    echo file_get_contents("thanks.html");
+    exit();
 }
+
+?>
