@@ -22,6 +22,6 @@ $validator->field('message')->maxLength(6000);
 $pp->requireCaptcha();
 
 
-$pp->sendEmailTo('martin@martingolson.com'); // ← Your email here
+$pp->sendEmailTo('someone@gmail.com'); // ← Your email here
 
 echo $pp->process($_POST);
