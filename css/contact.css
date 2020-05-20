@@ -162,6 +162,14 @@ form#captcha_form a.soloinput {
     margin-top: 15px;
 }
 
+.btn:hover {
+    float: right;
+    background-color: #996666;
+    color: #fff;
+    padding: 15px;
+    margin-top: 15px;
+}
+
 /* medium media query */
 @media only screen and (min-width: 32.5em) {
  
@@ -189,16 +197,18 @@ form#captcha_form a.soloinput {
         width: 			350px;
         height:			40px;
         padding:		7px;
-        margin-top: 	10px;
+        margin-top: 	5px;
         border:			#888888 1px solid;
     }
     
     form#captcha_form li div.soloinput {
-        height: 150px;
+        height: 200px;
         align-items: center;
     }
+
     form#captcha_form li textarea.soloinput {
         height:			300px;
     }
-    
+ 
+
 }
