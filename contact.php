@@ -1,37 +1,64 @@
 <?php
+if($_POST)
+{
+require('constant.php');
+    
+    $user_name      = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
+    $user_email     = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+    $user_phone     = filter_var($_POST["phone"], FILTER_SANITIZE_STRING);
+    $content   = filter_var($_POST["content"], FILTER_SANITIZE_STRING);
+    
+    if(empty($user_name)) {
+		$empty[] = "<b>Name</b>";		
+	}
+	if(empty($user_email)) {
+		$empty[] = "<b>Email</b>";
+	}
+	if(empty($user_phone)) {
+		$empty[] = "<b>Phone Number</b>";
+	}	
+	if(empty($content)) {
+		$empty[] = "<b>Message</b>";
+	}
+	
+	if(!empty($empty)) {
+		$output = json_encode(array('type'=>'error', 'text' => implode(", ",$empty) . ' Required!'));
+        die($output);
+	}
+	
+	if(!filter_var($user_email, FILTER_VALIDATE_EMAIL)){ //email validation
+	    $output = json_encode(array('type'=>'error', 'text' => '<b>'.$user_email.'</b> is an invalid Email, please correct it.'));
+		die($output);
+	}
+	
+	//reCAPTCHA validation
+	if (isset($_POST['g-recaptcha-response'])) {
+		
+		require('component/recaptcha/src/autoload.php');		
+		
+		$recaptcha = new \ReCaptcha\ReCaptcha(6LdenuQUAAAAAKUaOGujjuzURRTcKcFhTwlR6Xxz);
 
-/* This section validates the input boxes - note that is checking for objects by what they are named - it looks for "name", "email", and "message" which are what the input boxes are named in the HTML; this section also checks for a valid email address in the email box */
-if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) ||empty($_POST['message']) || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)){
-  /* If any of the boxes are empty or the email isn't valid, the user is redirected to a file named "error.html", which can be designed as desired */
-    echo file_get_contents("error.html");
-     exit();
-} else {
+		$resp = $recaptcha->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
 
-  /* Otherwise, if the boxes are filled and a valid email is provided, the email is sent - note that this is getting items by what they are named in the HTML again, and renaming them as $name, #email_address, and $message */
-    $name = $_POST['name'];
-    $email_address = $_POST['email'];
-    $phone_number = $_POST['phone'];
-    $message = $_POST['message'];
+		  if (!$resp->isSuccess()) {
+				$output = json_encode(array('type'=>'error', 'text' => '<b>Captcha</b> Validation Required!'));
+				die($output);				
+		  }	
+	}
+	
+	$toEmail = "member@testdomain.com";
+	$mailHeaders = "From: " . $user_name . "<" . $user_email . ">\r\n";
+	$mailBody = "User Name: " . $user_name . "\n";
+	$mailBody .= "User Email: " . $user_email . "\n";
+	$mailBody .= "Phone: " . $user_phone . "\n";
+	$mailBody .= "Content: " . $content . "\n";
 
-  /* This is the subject line of the email you will get - it will put in the name the user inputs */
-    $email_subject = "Website Contact Form:  $name";
-
-  /* This is the body of the email you will get - it has a title, then a message, then lists the information from the user. You can add or delete from this section as needed. */
-    $email_body = '<html><head><title>Hello!</title></head>'."\r\n";
-    $email_body .= "You have a new message from your website.\n\n"."Information:\n\nName: $name\n\nEmail:        $email_address\n\nPhone Number:  $phone_number\n\nMessage:\n$message";
-
-    $headers = 'MIME-Version: 1.0'."\r\n";
-    $headers .= 'Content-type: text/html; charset=utf-8'."\r\n";
-  
-  /* Change this to your email address */
-    $headers .= 'From:  <"martin@martingolson.com">';
-
-  /* Also change this to your email address */
-    mail("martin@martingolson.com", $email_subject, $email_body, $headers);
-
-  /* The user will be redirected to a file called "thanks.html", which can be designed as desired */
-    echo file_get_contents("thanks.html");
-    exit();
+	if (mail($toEmail, "Contact Mail", $mailBody, $mailHeaders)) {
+	    $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$user_name .', thank you for the comments. We will get back to you shortly.'));
+	    die($output);
+	} else {
+	    $output = json_encode(array('type'=>'error', 'text' => 'Unable to send email, please contact'.SENDER_EMAIL));
+	    die($output);
+	}
 }
-
 ?>
