@@ -1,7 +1,8 @@
 <?php
 require_once './vendor/autoload.php';
 
-use CaptchaBuilder;
+use 
+vendor\gregwar\captcha\CaptchaBuilder;
 session_start();
 
 $builder = new CaptchaBuilder;
