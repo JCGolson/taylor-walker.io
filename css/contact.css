@@ -197,12 +197,12 @@ form#captcha_form a.soloinput {
         width: 			350px;
         height:			40px;
         padding:		7px;
-        margin-top: 	5px;
+        margin-top: 	10px;
         border:			#888888 1px solid;
     }
     
     form#captcha_form li div.soloinput {
-        height: 200px;
+        height: 00px;
         align-items: center;
     }
 
